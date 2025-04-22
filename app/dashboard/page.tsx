@@ -73,7 +73,8 @@ export default function Dashboard() {
   }
 
   const copyShareLink = (uniqueKey: string) => {
-    const link = `${window.location.origin}/download/${uniqueKey}`
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || ''
+    const link = `${baseUrl}/download/${uniqueKey}`
     navigator.clipboard.writeText(link)
     toast({
       title: "Link copied",
