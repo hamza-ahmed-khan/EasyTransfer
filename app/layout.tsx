@@ -15,9 +15,6 @@ export const metadata: Metadata = {
     generator: 'v0.dev'
 }
 
-// Make environment variables available to the client
-export const runtime = "edge"
-
 export default function RootLayout({
   children,
 }: {

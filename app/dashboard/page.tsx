@@ -18,6 +18,7 @@ interface FileItem {
   created_at: string
   unique_key: string
   downloads: number
+  path: string
 }
 
 export default function Dashboard() {

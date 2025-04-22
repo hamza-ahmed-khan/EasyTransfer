@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { useSupabase } from "@/components/supabase-provider"
-import { LogOut, Upload, User } from "lucide-react"
+import { LogOut, Upload, User, Database } from "lucide-react"
 
 export default function Header() {
   const { user, supabase } = useSupabase()
@@ -50,6 +50,12 @@ export default function Header() {
               </Link>
             </>
           )}
+          <Link href="/test-connection">
+            <Button variant={pathname === "/test-connection" ? "default" : "ghost"}>
+              <Database className="mr-2 h-4 w-4" />
+              Test Connection
+            </Button>
+          </Link>
         </nav>
       </div>
     </header>
